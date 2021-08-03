@@ -30,4 +30,5 @@ public class T6_P1P2 {
 		System.out.printf("\nA tal da distância é %.2f ",d);
 		
 	}
+	
 }
