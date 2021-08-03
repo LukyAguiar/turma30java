@@ -27,7 +27,7 @@ public class T1_ComparaMaior {
 			System.out.printf("O maior número entre eles é N3 - Sendo os números: |N1:%d|N2:%d|N3:%d|",n1,n2,n3);
 		}
 		else if(n1 < 0 && n2 < 0 && n3 < 0){
-			System.out.println("Todos os n");
+			System.out.printf("Todos os números são NEGATIVOS - Sendo os números: N1:%d|N2:%d|N3:%d|",n1,n2,n3);
 		}
 		else {
 			System.out.printf("O Numeros são iguais - Sendo os números: |N1:%d|N2:%d|N3:%d|",n1,n2,n3);
