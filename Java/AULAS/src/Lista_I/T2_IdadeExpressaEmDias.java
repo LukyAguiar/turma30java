@@ -15,7 +15,7 @@ public class T2_IdadeExpressaEmDias {
 			
 			
 			//entrada
-			System.out.println("Digite a sua idade no total de dias: ");
+			System.out.print("Digite a sua idade no total de dias: ");
 			totalDias = gravar.nextInt();
 			
 			anos = totalDias / 365;
