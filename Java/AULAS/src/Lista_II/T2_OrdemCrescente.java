@@ -17,18 +17,6 @@ public class T2_OrdemCrescente {
 		System.out.println("Digite um valor para N3: ");
 		n3 = gravar.nextInt();
 		
-		if(n1 > n2 && n1 > n3){
-			nd1 = n1;
-			if(n2 > n3) {
-				nd2 = n2;
-				 if(n3 > n2){
-					 nd3 = n3;
-				 }
-			}
-		}
-		else {
 			
-		}
 	}
-	
 }
