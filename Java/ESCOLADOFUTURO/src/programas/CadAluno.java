@@ -103,7 +103,6 @@ public class CadAluno {
 			 System.out.println("Mat\tAlunes\t\tNota\t");
 				for(int x = 0; x< alunes.length; x++) {
 					if(notas[x] != 0){
-						
 						System.out.printf("%s\t%s\t%d\t%s\n ",matriculas[x],alunes[x],notas[x],auxAtivo);
 						if(notas[x] <= 5) {
 							System.out.println("Estude mais !!!");
