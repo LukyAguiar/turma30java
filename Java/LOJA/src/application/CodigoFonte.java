@@ -1,12 +1,14 @@
 package application;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class CodigoFonte {
 	public static void main(String[] args) {
 
-		// SCANNER
+		// FUNÇÕES - BIBLIOTECAS
 		Scanner leia = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("#.00");
 
 		// VARIÁVEIS
 		final int TAM = 10;
@@ -24,7 +26,7 @@ public class CodigoFonte {
 		int contEstoque[] = new int[TAM];
 		int auxQntd[] = new int[TAM]; // CONTADOR
 		int pagamento = 0;
-S
+
 		// GERADOR DE CÓDIGO
 		for (int x = 0; x < 10; x++) {
 			codigo[x] = "G7-0" + (x + 1);
@@ -46,8 +48,8 @@ S
 		}
 
 		linha();
-		System.out.println("\nDeseja Fazer Compras? ");
-		System.out.println("\nDigite 'S' Para Sim e 'N' Para Não ");
+		System.out.println("DESEJA FAZER COMPRAS? ");
+		System.out.print("\n(DIGITE 'S' PARA SIM E 'N' PARA NÃO): ");
 		op = leia.next().toUpperCase().charAt(0);
 		linha();
 
@@ -56,12 +58,12 @@ S
 			// COMEÇO DA PRIMEIRA FUNÇÃO DE FAZER COMPRAS
 
 			do {
-				System.out.println("\nDigite o Código do Produto");
+				System.out.print("\nDIGITE O CÓDIGO DO PRODUTO: ");
 				auxCod = leia.next().toUpperCase();
 
 				for (int x = 0; x < 10; x++) {
 					if (auxCod.equals(codigo[x])) {
-						System.out.println("INFORME A QUANTIDADE QUE DESEJA: ");
+						System.out.print("INFORME A QUANTIDADE QUE DESEJA: ");
 						contEstoque[x] = leia.nextInt();
 						auxQntd[x] += contEstoque[x];
 
@@ -86,7 +88,7 @@ S
 							for (x = 0; x < 10; x++) {
 								if (auxQntd[x] > 0) {
 									System.out.print("\n " + codigo[x] + "\t     " + produto[x] + "\t  R$"
-											+ Math.ceil(valorCompra[x]) + "\t    " + auxQntd[x]);
+											+ df.format(valorCompra[x]) + "\t    " + auxQntd[x]);
 								}
 							}
 
@@ -101,14 +103,14 @@ S
 							&& auxCod.equals("G7-05") == false && auxCod.equals("G7-06") == false
 							&& auxCod.equals("G7-07") == false && auxCod.equals("G7-08") == false
 							&& auxCod.equals("G7-09") == false && auxCod.equals("G7-010") == false) {
-						System.out.println("Código invalido!");
+						System.out.println("CÓDIGO INVÁLIDO!");
 						break;
 					}
 
 				}
 				// FUNÇÃO DE CONTINUAR COMPRANDO
-				System.out.println("\nDESEJA CONTINUAR COMPRANDO?");
-				System.out.println("\nDIGITE 'S' PARA SIM E 'N' PARA NÃO: ");
+				System.out.println("DESEJA CONTINUAR COMPRANDO?");
+				System.out.print("\nDIGITE 'S' PARA SIM E 'N' PARA NÃO: ");
 				op = leia.next().toUpperCase().charAt(0);
 				linha();
 
@@ -133,7 +135,7 @@ S
 				for (int x = 0; x < 10; x++) {
 					if (auxQntd[x] > 0) {
 						System.out.print("\n " + codigo[x] + "\t     " + produto[x] + "\t  R$"
-								+ Math.ceil(valorCompra[x]) + "\t    " + auxQntd[x]);
+								+ df.format(valorCompra[x]) + "\t    " + auxQntd[x]);
 					}
 				}
 
@@ -143,7 +145,7 @@ S
 
 				while (op2 == 'S') {
 
-					System.out.println("\nDigite o Código do Produto");
+					System.out.print("\nDIGITE O CÓDIGO DO PRODUTO: ");
 					auxCod = leia.next().toUpperCase();
 
 					for (int x = 0; x < 10; x++) {
@@ -163,7 +165,7 @@ S
 					for (int x = 0; x < 10; x++) {
 						if (auxQntd[x] > 0) {
 							System.out.print("\n " + codigo[x] + "\t     " + produto[x] + "\t  R$"
-									+ Math.ceil(valorCompra[x]) + "\t    " + auxQntd[x]);
+									+ df.format(valorCompra[x]) + "\t    " + auxQntd[x]);
 						}
 					}
 
@@ -185,7 +187,7 @@ S
 					for (int y = 0; y < 10; y++) {
 						if (auxQntd[y] > 0) {
 							System.out.print("\n " + codigo[y] + "\t     " + produto[y] + "\t  R$"
-									+ Math.ceil(valorCompra[y]) + "\t    " + auxQntd[y]);
+									+ df.format(valorCompra[y]) + "\t    " + auxQntd[y]);
 						}
 
 					}
@@ -210,9 +212,9 @@ S
 							linha();
 							contador2 = contador * 0.9;
 							System.out.print("\n\t\t   ✧ NOTA FISCAL ✧\n\n");
-							System.out.print("\t\t\n VALOR TOTAL: R$ " + Math.round(contador2) + ",00");
+							System.out.print("\t\t\n VALOR TOTAL: R$ " + df.format(contador2));
 							contador2 = contador * 0.09;
-							System.out.print("\t\t\n 9% DE IMPOSTOS: R$ " + Math.round(contador2) + ",00");
+							System.out.print("\t\t\n 9% DE IMPOSTOS: R$ " + df.format(contador2));
 							linha();
 							break;
 
@@ -222,9 +224,9 @@ S
 							linha();
 							contador2 = contador * 1.1;
 							System.out.print("\n\t\t   ✧ NOTA FISCAL ✧\n\n");
-							System.out.print("\t\t\n VALOR TOTAL: R$ " + Math.round(contador2) + ",00");
+							System.out.print("\t\t\n VALOR TOTAL: R$ " + df.format(contador2));
 							contador2 = contador * 0.09;
-							System.out.print("\t\t\n 9% DE IMPOSTOS: R$ " + Math.round(contador2) + ",00");
+							System.out.print("\t\t\n 9% DE IMPOSTOS: R$ " + df.format(contador2));
 							linha();
 							break;
 
@@ -235,9 +237,9 @@ S
 							contador = (contador * 1.15) / 2;
 							System.out.print("\n\t\t   ✧ NOTA FISCAL ✧\n\n");
 							System.out.print("\n\tPARCELADO EM 2X | 15% DE ACRÉSCIMO\n");
-							System.out.print("\tVALOR TOTAL DE CADA PARCELA: R$ " + Math.round(contador) + ",00");
+							System.out.print("\tVALOR TOTAL DE CADA PARCELA: R$ " + df.format(contador));
 							contador2 = contador * 0.09;
-							System.out.print("\n\t 9% DE IMPOSTOS: R$ " + Math.round(contador2) + ",00");
+							System.out.print("\n\t 9% DE IMPOSTOS: R$ " + df.format(contador2));
 							linha();
 							break;
 
@@ -269,7 +271,7 @@ S
 					System.out.print("\n\t\t      \n");
 					nome();
 					linha();
-					System.out.println("\t\t Até breve !!");
+					System.out.println("\t\t ATÉ BREVE !!");
 				}
 
 			}
@@ -280,10 +282,10 @@ S
 			System.out.print("\n\t\t      \n");
 			nome();
 			linha();
-			System.out.println("\t\t Até breve!!");
+			System.out.println("\t\t ATÉ BREVE!!");
 
 		} else {
-			System.out.println("Opção Invalida");
+			System.out.println("OPÇÃO INVÁLIDA");
 
 		}
 
