@@ -2,6 +2,7 @@ package Lista_IV;
 
 public class Cliente {
 	
+	//Atributos
 	public String nome; 
 	public String cpf;
 	public String email; 
@@ -10,6 +11,8 @@ public class Cliente {
 	public char genero;
 	
 	
+	
+	//Métodos
 	public void mostraNome()
 	{
 		System.out.println("Nome: " + nome);
@@ -45,6 +48,7 @@ public class Cliente {
 		}
 	}
 	
+	//Construtores - Carga
 	
 }
 
