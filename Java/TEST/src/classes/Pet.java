@@ -49,6 +49,8 @@ public class Pet {
 		this.anoNascimento = anoNascimento;
 	}
 	
+	//Metodo
+	
 	public void emiteSom() {
 		System.out.println("Emitindo o som do bicho;");
 	}
