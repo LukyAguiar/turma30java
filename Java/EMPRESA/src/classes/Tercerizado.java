@@ -22,10 +22,8 @@ public class Tercerizado extends Funcionario{
 	//Metodos 
 
 	@Override
-	public void salario(){	
-		
+	public double salario(){	
 		return super.getValorPorHora()* super.getHorasTrabalhadas() + adicional;
-		
 	}
 
 
