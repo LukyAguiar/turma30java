@@ -36,7 +36,10 @@ public class Animal {
 	public void emitirSom() {
 		System.out.println("Emitindo o som do bicho;");
 	}
-
+	
+	public int idade() {
+		return (2021 - anoNascimento);
+	}
 	
 	
 }
