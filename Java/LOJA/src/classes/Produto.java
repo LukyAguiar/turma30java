@@ -1,7 +1,7 @@
 package classes;
 
 //primeira coisa a se pensar, é pensar no nome da classe;
-public class Produto {
+public  class Produto {
 
 	//Atributos
 	private String codigo;
