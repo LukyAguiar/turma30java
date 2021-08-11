@@ -2,6 +2,7 @@ package programas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import classes.Produto;
 
@@ -10,6 +11,8 @@ public class CadLojaNovo {
 	public static void main(String[] args) {
 		
 		//Variavel
+		
+		Scanner leia = new Scanner(System.in);
 		List<String> cadastro = new ArrayList<>();
 		
 		cadastro.add("SPFC");
