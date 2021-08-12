@@ -38,11 +38,9 @@ public class CadLojaNovo {
 		x = leia.nextInt();
 		System.out.println("Vc escolheu o time "+ cadastro.get(x));
 		
-		/*for (String time : cadastro) {
+		for (String time : cadastro) {
 			System.out.println(time);
-		}
-		*/
 		
+		}
 	}
-
 }

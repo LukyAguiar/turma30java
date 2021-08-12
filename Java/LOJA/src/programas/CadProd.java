@@ -21,5 +21,7 @@ public class CadProd {
 		
 		
 		lista.add(new Revista("001","EXAME",50.00,10,"ABRIL"));
+		
+		System.out.println(lista.get(0));
 	}
 }
