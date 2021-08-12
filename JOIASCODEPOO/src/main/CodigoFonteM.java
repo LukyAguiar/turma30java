@@ -17,6 +17,7 @@ public class CodigoFonteM {
 		String auxCod;
 		int pos, x, auxQntd, pagamento;
 		char op, op2, op3;
+		double contador = 0.0;
 		
 		// LISTAS
 		ArrayList<Produto> itens = new ArrayList<>();
@@ -123,8 +124,9 @@ public class CodigoFonteM {
 			linha();
 			for(int i = 0; i < carrinho.size(); i++) {
 				pos = i;
-				System.out.printf("\t   VALOR TOTAL DA COMPRA: R$ %.2f", (carrinho.get(pos).getValor() * carrinho.get(pos).getEstoque()));
+				contador += (carrinho.get(pos).getValor() * carrinho.get(pos).getEstoque());
 			}
+			System.out.print("\t   VALOR TOTAL DA COMPRA: R$" + df.format(contador));
 			linha();
 			System.out.print("\t\tFORMA DE PAGAMENTOS:\n\n");
 			System.out.print(" OPÇÃO 1 - A VISTA COM 10% DESCONTO\n");
